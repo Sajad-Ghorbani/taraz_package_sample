@@ -302,7 +302,6 @@ lib/src/injection_container.dart
 ✔️ Repository داشته باشد
 ✔️ تست Repository داشته باشد
 ✔️ DataSource interface + impl داشته باشد
-✔️ از مدل Pagination مشترک استفاده کند
 
 ---
 
