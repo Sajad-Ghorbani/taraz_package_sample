@@ -1,5 +1,5 @@
 import 'package:taraz_package_sample/src/core/helpers/api.dart';
-import 'package:taraz_package_sample/src/data/data_sources/lead_datasource.dart';
+import 'package:taraz_package_sample/src/data/data_sources/lead_data_source.dart';
 import 'package:dio/dio.dart';
 
 class LeadDatasourceImpl implements LeadDatasource {
@@ -13,7 +13,7 @@ class LeadDatasourceImpl implements LeadDatasource {
   }
 
   @override
-  Future<dynamic> getList() async {
+  Future<dynamic> getLeads() async {
     final response =  await  _dio.get(Api.getLeads);
     return response.data;
   }

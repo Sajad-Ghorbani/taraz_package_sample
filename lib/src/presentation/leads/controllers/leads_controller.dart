@@ -7,7 +7,7 @@ class LeadsController extends GetxController {
 
   LeadsController(this._leadRepository);
 
-  Future<PaginatedResponse<VMLead>?> getList() async {
-    return await _leadRepository.getList();
+  Future<PaginatedResponse<VMLead>?> getLeads() async {
+    return await _leadRepository.getLeads();
   }
 }

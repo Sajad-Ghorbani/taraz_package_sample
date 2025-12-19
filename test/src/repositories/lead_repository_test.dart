@@ -161,16 +161,16 @@ void main() {
         'statusCode': 0
       };
 
-      when(() => leadDataSource.getList()).thenAnswer((invocation) async => response);
+      when(() => leadDataSource.getLeads()).thenAnswer((invocation) async => response);
 
-      final result = await leadRepository.getList();
+      final result = await leadRepository.getLeads();
 
       expect(result, isA<PaginatedResponse<VMLead>>());
       expect(result?.items.length, 1);
       expect(result?.items.first.title, 'string');
       expect(result?.items.first.successStatus, LeadStatus.inProgress);
 
-      verify(() => leadDataSource.getList()).called(1);
+      verify(() => leadDataSource.getLeads()).called(1);
       verifyNoMoreInteractions(leadDataSource);
     });
   });
